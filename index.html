@@ -4,6 +4,7 @@
       <meta charset="utf-8">
       <title>E shop</title>
       <link rel="stylesheet" href="css/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimal-ui">
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
    </head>
@@ -24,12 +25,44 @@
             <div class="shopingIcon">0</div>
          </div>
       </nav>
-      <aside class="slideMenu"></aside>
+      <aside class="slideMenu">
+         <h6>MENU</h6>
+         <ul>
+            <li>COLLECTION</li>
+            <li>LOOKBOOK</li>
+            <li>ABOUT</li>
+            <li>STOCKISTS</li>
+            <li id="customerCare">CUSTOMER CARE</li>
+            <li>LOGIN</li>
+         </ul>
+      </aside>
       <div id="background"></div>
 
+      <main>
+         <div class="PicsContainer">
+         </div>
+
+      </main>
 
 
-   <script type="text/javascript" src="js/app.js">
+      <footer>
+         <div class="displayButtons">
+            <div id="menuMainDisplay">
+            <img src="img/menu-big.png">
+           </div>
+            <div id="menuMainDisplay">
+            <img src="img/menu-main.png">
+           </div>
+           <div id="menuMainDisplay">
+           <img src="img/menu-detail.png">
+          </div>
+       </div>
+      </footer>
+
+
+
+   <script type="text/javascript" src="js/app.js"> </script>
+
 
    </script>
    </body>

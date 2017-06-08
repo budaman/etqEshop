@@ -13,6 +13,14 @@ body {
    background-color: #f3f3f5;
 }
 
+/**************************DISABLING SCROLLING **********************/
+.disableScroll{
+      overflow-y: hidden;
+      overflow-y: hidden;
+}
+
+/****************************DISABLING SCROLLING ENDS ******************/
+
 
 /************************* INTRO *****************************************/
 
@@ -85,6 +93,7 @@ body {
    left: 0px;
    z-index: 96;
    border-bottom: 1px solid rgba(100,100,100,0.3);
+   transition: all 0.40s ease-in-out;
 }
 
 #navBar h1 {
@@ -165,8 +174,18 @@ body {
 }
 /***************SLIDE MENU **********************/
 
-.slideMenu {
+.slideMenu h6 {
+   letter-spacing: 4px;
+   display: inline-block;
    position: relative;
+   left: 40px;
+   font-size: 0.8rem;
+
+}
+
+.slideMenu {
+   position: fixed;
+   top: 0;
    display: block;
    background-color: #1d1d1f;
    margin: 0;
@@ -175,6 +194,23 @@ body {
    height: 100vh;
    left: -280px;
    z-index: 201;
+   transition: all 0.40s ease-in-out;
+   color: white;
+   letter-spacing: 2px;
+}
+
+.slideMenu ul {
+   list-style-type: none;
+}
+
+.slideMenu li {
+   margin-top: 30px;
+   font-size: 0.7rem;
+   color: rgba(156,156,156,1);
+}
+
+#customerCare {
+   margin-top: 70px;
 }
 
 #background {
@@ -185,10 +221,75 @@ body {
 
 
 .slideMenuBackGround {
-   position: absolute;
+   position: fixed;
    top: 0;
    right: 0;
    width: 100vw;
    height: 100vh;
    z-index: 200;
 }
+
+
+/***************SLIDE MENU ENDS **********************/
+
+
+
+/***************FOOTER**************************/
+
+footer {
+   height: 54px;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   bottom: 0px;
+   position: fixed;
+   background-color: rgba(243, 243, 245, 0.3);
+}
+
+.displayButtons {
+   height: 100%;
+   display: flex;
+}
+
+.displayButtons #menuMainDisplay {
+   width: 54px;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-style: solid;
+   border-color: #FFF;
+   border-width: 1px 1px 1px 1px;
+}
+
+/***************FOOTER ENDS**************************/
+
+
+
+/****************MAIN STARTS**************************/
+
+main {
+   position: absolute;
+   top: 0;
+   width: 100vw;
+   height: 100vh;
+   margin: 0;
+   padding: 0;
+   transition: all 0.40s ease-in-out;
+}
+
+.PicsContainer {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0;
+   padding: 0;
+}
+
+.box img {
+   width: 300px;
+   height: 300px;
+   margin: 0;
+   padding: 0;
+}
+
+/*****************MAIN ENDS*****************************/
