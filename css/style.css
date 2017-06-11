@@ -16,13 +16,18 @@ body {
 /**************************DISABLING SCROLLING **********************/
 .disableScroll{
       overflow-y: hidden;
-      overflow-y: hidden;
 }
 
 /****************************DISABLING SCROLLING ENDS ******************/
 
 
 /************************* INTRO *****************************************/
+
+.invisible-scrollbar::-webkit-scrollbar {
+    visibility: hidden;
+    width: 0;
+ }
+
 
 #intro {
    position: fixed;
@@ -37,8 +42,10 @@ body {
    top: 0;
    transition: all 1s ease-in-out;
    z-index: 99;
-
 }
+
+
+
 
 #background-op {
    position: absolute;
@@ -236,6 +243,8 @@ body {
 
 /***************FOOTER**************************/
 
+
+/* trys pirmi mygtukai */
 footer {
    height: 54px;
    width: 100%;
@@ -243,15 +252,20 @@ footer {
    padding: 0;
    bottom: 0px;
    position: fixed;
-   background-color: rgba(243, 243, 245, 0.3);
+   overflow: hidden;
 }
+
 
 .displayButtons {
    height: 100%;
    display: flex;
 }
 
-.displayButtons #menuMainDisplay {
+.displayButtons * {
+   transition: all .45s cubic-bezier(.25,.46,.45,.94);
+}
+
+.menuMainDisplay, .chosenOne {
    width: 54px;
    height: 100%;
    display: flex;
@@ -261,6 +275,108 @@ footer {
    border-color: #FFF;
    border-width: 1px 1px 1px 1px;
 }
+
+.menuMainDisplay {
+   background-color: rgba(243, 243, 245, 0.3);
+}
+
+.menuMainDisplay:hover  {
+   background-color: #FFF;
+   cursor: pointer;
+}
+
+.menuMainDisplay img {
+   position: absolute;
+   height: 10px;
+   width: 10px;
+   opacity: 0.4;
+   bottom: 22px;
+   transition: all .45s cubic-bezier(.25,.46,.45,.94);
+}
+
+.hoveredImg {
+   position: absolute;
+   height: 12px;
+   width: 12px;
+   opacity: 0.4;
+   bottom: -30px !important;
+}
+
+.menuMainDisplay:hover .hoveredImg {
+   bottom: 22px !important;
+}
+
+.menuMainDisplay:hover .notHoveredImg{
+   bottom: 70px;
+}
+
+
+/* nelieciamas animacijos chosenOne
+ */
+.chosenOne img {
+   height: 10px;
+   width: 10px;
+   opacity: 1;
+}
+
+.chosenOne {
+   opacity: 1;
+   background-color: rgba(243, 243, 245, 0.3);
+}
+/* trys pirmi mygtukai baigiasi */
+
+/*filtras */
+
+.filter {
+   position: absolute;
+   display: flex;
+   top: 0px;
+   right: 0;
+   width: 150px;
+   height: 100%;
+   background-color: rgba(243, 243, 245, 0.3);
+   justify-content: center;
+   border-style: solid;
+   border-color: #FFF;
+   border-width: 1px 1px 1px 1px;
+   overflow: hidden;
+   cursor: pointer;
+   transition: all .45s cubic-bezier(.25,.46,.45,.94);
+}
+
+.filter * {
+   transition: all .45s cubic-bezier(.25,.46,.45,.94);
+   letter-spacing: 4px;
+   font-size: 0.7rem;
+}
+
+.filterDisplay {
+   position: absolute;
+   bottom: 14px;
+   display: flex;
+   align-items: center;
+}
+
+.hoveredfilterDisplay {
+   position: absolute;
+   display: flex;
+   align-items: center;
+   bottom: -30px;
+}
+
+.filter:hover {
+   background-color: #FFF;
+}
+
+.filter:hover .hoveredfilterDisplay {
+   bottom: 14px !important;
+}
+
+.filter:hover .filterDisplay {
+   bottom: 70px !important;
+}
+
+/* filtras baigiasi*/
 
 /***************FOOTER ENDS**************************/
 

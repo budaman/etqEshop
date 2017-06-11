@@ -51,10 +51,12 @@ function skrolinimas() {
 //apears navBar
 var navBar = document.querySelector('#navBar');
 
+
 function disableIntro() {
    intro.style.display = "none";
    navBar.style.display = "block";
    window.removeEventListener('scroll', skrolinimas);
+   body.classList.remove('invisible-scrollbar');
 }
 
 //IVYKIAI PASKROLINUS ARBA PASPAUDUS CLICK ANT IMIGO BAIGIASI
