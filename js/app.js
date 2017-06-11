@@ -70,6 +70,7 @@ var main = document.querySelector('main');
 
 
 menuButton.addEventListener('click', function() {
+
    navBar.style.left = "280px";
    slideMenu.style.left = "0";
    slideMenuBackGround.classList.add('slideMenuBackGround');
@@ -79,6 +80,7 @@ menuButton.addEventListener('click', function() {
 });
 
 slideMenuBackGround.addEventListener('click', function() {
+
    slideMenuBackGround.classList.remove('slideMenuBackGround');
    navBar.style.left = "0";
    slideMenu.style.left = "-280px";
@@ -108,7 +110,18 @@ var twoPartsButton = document.querySelector('#intoTwoParts');
 var onePartButton = document.querySelector('#intoOnePart');
 var fourPartButton = document.querySelector('#intoFourParts');
 var container = document.querySelector('.PicsContainer');
+var aukstis = "800px";
+
+
 twoPartsButton.addEventListener('click', function() {
+   $(document).scrollTop('0');
+   container.classList.add('addOpacity');
+   setTimeout(twoPartsDisplay, 800);
+
+
+});
+
+function twoPartsDisplay() {
    container.classList.remove('PicsContainerCentered');
    for (i = 0; i < images.length; i++) {
       images[i].classList.add('padalintiPoDu');
@@ -120,9 +133,20 @@ twoPartsButton.addEventListener('click', function() {
    pazymetas.classList.remove('chosenOne');
    twoPartsButton.classList.add('chosenOne');
    twoPartsButton.classList.remove('menuMainDisplay');
-});
+   container.classList.remove('addOpacity');
+   container.style.top = aukstis;
+   container.classList.add('notransition');
+   setTimeout(comeUp, 600);
+}
 
 onePartButton.addEventListener('click', function() {
+   $(document).scrollTop('0');
+   container.classList.add('addOpacity');
+   setTimeout(onePartsDisplay, 800);
+
+});
+
+function onePartsDisplay() {
    container.classList.remove('padalintiPoDu');
    container.classList.add('PicsContainerCentered');
    for (i = 0; i < images.length; i++) {
@@ -135,9 +159,22 @@ onePartButton.addEventListener('click', function() {
    pazymetas.classList.remove('chosenOne');
    onePartButton.classList.add('chosenOne');
    onePartButton.classList.remove('menuMainDisplay');
-});
+   container.classList.remove('addOpacity');
+   container.style.top = aukstis;
+   container.classList.add('notransition');
+   setTimeout(comeUp, 600);
+
+}
+
 
 fourPartButton.addEventListener('click', function() {
+
+   $(document).scrollTop('0');
+   container.classList.add('addOpacity');
+   setTimeout(fourPartsDisplay, 800);
+});
+
+function fourPartsDisplay() {
    container.classList.remove('PicsContainerCentered');
    for (i = 0; i < images.length; i++) {
       images[i].classList.remove('padalintiPoDu');
@@ -150,4 +187,15 @@ fourPartButton.addEventListener('click', function() {
    pazymetas.classList.remove('chosenOne');
    fourPartButton.classList.add('chosenOne');
    fourPartButton.classList.remove('menuMainDisplay');
-});
+   container.classList.remove('addOpacity');
+   container.style.top = aukstis;
+   container.classList.add('notransition');
+   setTimeout(comeUp, 600);
+}
+
+
+function comeUp() {
+   container.classList.remove('notransition');
+   container.style.top = "0px";
+
+}

@@ -13,6 +13,13 @@ body {
    background-color: #f3f3f5;
 }
 
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
 /**************************DISABLING SCROLLING **********************/
 .disableScroll{
       overflow-y: hidden;
@@ -254,12 +261,14 @@ main {
 }
 
 .PicsContainer {
+   position: absolute;
    width: 90vw;
    justify-content: space-between;
    display: flex;
    flex-wrap: wrap;
    margin: 0;
    padding: 0;
+   transition: all 0.6s ease;
 }
 
 .PicsContainerCentered {
@@ -272,6 +281,7 @@ main {
    height: 300px;
    margin: 0;
    padding: 0;
+   transition: all 0.4s ease-in-out;
 }
 
 .padalintiPoDu {
@@ -289,6 +299,10 @@ main {
    height: 300px !important;
 }
 
+.addOpacity {
+   opacity: 0;
+}
+
 @media all and (max-width:1115px){
   .PicsContainer {
     justify-content: center !important;
@@ -297,6 +311,12 @@ main {
    .displayButtons {
       display: none !important;
     }
+
+   .filter {
+    right: 0;
+    left: 0;
+    margin: auto;
+   }
 
 }
 
