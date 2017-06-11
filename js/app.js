@@ -76,6 +76,7 @@ menuButton.addEventListener('click', function() {
    slideMenuBackGround.classList.add('slideMenuBackGround');
    slideMenuBackGround.style.opacity = "0.6";
    main.style.left = "280px";
+   body.classList.add('disableScroll');
 });
 
 slideMenuBackGround.addEventListener('click', function() {
@@ -84,6 +85,7 @@ slideMenuBackGround.addEventListener('click', function() {
    slideMenu.style.left = "-280px";
    slideMenuBackGround.style.opacity = "0.4";
    main.style.left = "0";
+   body.classList.remove('disableScroll');
 });
 //SIDE MENU ATSIRADIMO PABAIGA
 

@@ -29,6 +29,8 @@ body {
  }
 
 
+
+
 #intro {
    position: fixed;
    width: 100%;
@@ -214,6 +216,13 @@ body {
    margin-top: 30px;
    font-size: 0.7rem;
    color: rgba(156,156,156,1);
+   cursor: pointer;
+   transition: all .45s cubic-bezier(.25,.46,.45,.94);
+}
+
+.slideMenu li:hover {
+   color: white;
+   padding-left: 5px;
 }
 
 #customerCare {
@@ -239,7 +248,38 @@ body {
 
 /***************SLIDE MENU ENDS **********************/
 
+/****************MAIN STARTS**************************/
 
+main {
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 100vh;
+   margin: 0;
+   padding: 0;
+   transition: all 0.40s ease-in-out;
+   display: flex;
+   justify-content: center;
+}
+
+.PicsContainer {
+   width: 90vw;
+   justify-content: space-between;
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0;
+   padding: 0;
+}
+
+
+.box img {
+   width: 300px;
+   height: 300px;
+   margin: 0;
+   padding: 0;
+}
+
+/*****************MAIN ENDS*****************************/
 
 /***************FOOTER**************************/
 
@@ -379,33 +419,3 @@ footer {
 /* filtras baigiasi*/
 
 /***************FOOTER ENDS**************************/
-
-
-
-/****************MAIN STARTS**************************/
-
-main {
-   position: absolute;
-   top: 0;
-   width: 100vw;
-   height: 100vh;
-   margin: 0;
-   padding: 0;
-   transition: all 0.40s ease-in-out;
-}
-
-.PicsContainer {
-   display: flex;
-   flex-wrap: wrap;
-   margin: 0;
-   padding: 0;
-}
-
-.box img {
-   width: 300px;
-   height: 300px;
-   margin: 0;
-   padding: 0;
-}
-
-/*****************MAIN ENDS*****************************/
