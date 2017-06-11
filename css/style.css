@@ -28,9 +28,6 @@ body {
     width: 0;
  }
 
-
-
-
 #intro {
    position: fixed;
    width: 100%;
@@ -45,9 +42,6 @@ body {
    transition: all 1s ease-in-out;
    z-index: 99;
 }
-
-
-
 
 #background-op {
    position: absolute;
@@ -74,7 +68,6 @@ body {
    transition: all 3s ease-in-out;
    z-index: 99;
 }
-
 
 #intro h1 {
    position: absolute;
@@ -235,7 +228,6 @@ body {
    transition: all 500ms cubic-bezier(.25,.46,.45,.94);
 }
 
-
 .slideMenuBackGround {
    position: fixed;
    top: 0;
@@ -244,7 +236,6 @@ body {
    height: 100vh;
    z-index: 200;
 }
-
 
 /***************SLIDE MENU ENDS **********************/
 
@@ -271,12 +262,49 @@ main {
    padding: 0;
 }
 
+.PicsContainerCentered {
+   justify-content: center !important;
+   align-items: center !important;
+}
 
 .box img {
    width: 300px;
    height: 300px;
    margin: 0;
    padding: 0;
+}
+
+.padalintiPoDu {
+   width: 500px !important;
+   height: 500px !important;
+}
+
+.padalintiPoViena {
+   width: 700px !important;
+   height: 700px !important;
+}
+
+.padalintiPoKeturis {
+   width: 300px !important;
+   height: 300px !important;
+}
+
+@media all and (max-width:1115px){
+  .PicsContainer {
+    justify-content: center !important;
+    align-items: center !important;
+}
+   .displayButtons {
+      display: none !important;
+    }
+
+}
+
+@media all and (max-width:650px) {
+   .box img {
+      width: 300px !important;
+      height: 300px !important;
+   }
 }
 
 /*****************MAIN ENDS*****************************/
@@ -349,7 +377,6 @@ footer {
 .menuMainDisplay:hover .notHoveredImg{
    bottom: 70px;
 }
-
 
 /* nelieciamas animacijos chosenOne
  */

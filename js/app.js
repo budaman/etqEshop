@@ -45,7 +45,6 @@ function skrolinimas() {
    logoText.style.backgroundColor = "white";
    introColor.style.opacity = "1";
    setTimeout(disableIntro, 1000);
-   console.log('labas vakaras');
 }
 
 //apears navBar
@@ -91,7 +90,7 @@ slideMenuBackGround.addEventListener('click', function() {
 
 
 
-
+//sudeda visas nutraukas
 for (i = 1; i <= 24; i++) {
    var div = document.createElement("div");
    div.classList.add(`box`);
@@ -103,5 +102,52 @@ for (i = 1; i <= 24; i++) {
    PicsContainer.appendChild(div);
 }
 
+//display keitimas
+var images = document.querySelectorAll(`.box img`);
+var twoPartsButton = document.querySelector('#intoTwoParts');
+var onePartButton = document.querySelector('#intoOnePart');
+var fourPartButton = document.querySelector('#intoFourParts');
+var container = document.querySelector('.PicsContainer');
+twoPartsButton.addEventListener('click', function() {
+   container.classList.remove('PicsContainerCentered');
+   for (i = 0; i < images.length; i++) {
+      images[i].classList.add('padalintiPoDu');
+      images[i].classList.remove('padalintiPoViena');
+      images[i].classList.remove('padalintiPoKeturis');
+   }
+   var pazymetas = document.querySelector('.chosenOne');
+   pazymetas.classList.add('menuMainDisplay');
+   pazymetas.classList.remove('chosenOne');
+   twoPartsButton.classList.add('chosenOne');
+   twoPartsButton.classList.remove('menuMainDisplay');
+});
 
-//padaryti permatomas ikonas per viduri
+onePartButton.addEventListener('click', function() {
+   container.classList.remove('padalintiPoDu');
+   container.classList.add('PicsContainerCentered');
+   for (i = 0; i < images.length; i++) {
+      images[i].classList.add('padalintiPoViena');
+      images[i].classList.remove('padalintiPoDu');
+      images[i].classList.remove('padalintiPoKeturis');
+   }
+   var pazymetas = document.querySelector('.chosenOne');
+   pazymetas.classList.add('menuMainDisplay');
+   pazymetas.classList.remove('chosenOne');
+   onePartButton.classList.add('chosenOne');
+   onePartButton.classList.remove('menuMainDisplay');
+});
+
+fourPartButton.addEventListener('click', function() {
+   container.classList.remove('PicsContainerCentered');
+   for (i = 0; i < images.length; i++) {
+      images[i].classList.remove('padalintiPoDu');
+      images[i].classList.remove('padalintiPoViena');
+      images[i].classList.add('padalintiPoKeturis');
+   }
+
+   var pazymetas = document.querySelector('.chosenOne');
+   pazymetas.classList.add('menuMainDisplay');
+   pazymetas.classList.remove('chosenOne');
+   fourPartButton.classList.add('chosenOne');
+   fourPartButton.classList.remove('menuMainDisplay');
+});
