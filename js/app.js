@@ -67,28 +67,53 @@ var menuButton = document.querySelector('.menu');
 var slideMenu = document.querySelector('.slideMenu');
 var slideMenuBackGround = document.querySelector('#background');
 var main = document.querySelector('main');
+//animacija, kad atslystu slide menu tekstas
+var menuCont = document.querySelector('.menuCont');
+var footerCont = document.querySelector('.menuFooter');
 
 
 menuButton.addEventListener('click', function() {
 
-   navBar.style.left = "280px";
+   navBar.style.left = "281px";
    slideMenu.style.left = "0";
    slideMenuBackGround.classList.add('slideMenuBackGround');
    slideMenuBackGround.style.opacity = "0.6";
-   main.style.left = "280px";
+   main.style.left = "281px";
    body.classList.add('disableScroll');
+   setTimeout(sideBarAnimacija, 150); //cia reikia kad po kazkiek laiko atsirastu animuotas tekstas
 });
+
+function sideBarAnimacija() {
+   menuCont.classList.add('menuContAnimation'); //ATSKRIEJA SLIDE MENU TEKSTAS
+   footerCont.style.bottom = "0px";
+}
+
+
 
 slideMenuBackGround.addEventListener('click', function() {
 
    slideMenuBackGround.classList.remove('slideMenuBackGround');
    navBar.style.left = "0";
-   slideMenu.style.left = "-280px";
+   slideMenu.style.left = "-281px";
    slideMenuBackGround.style.opacity = "0.4";
    main.style.left = "0";
    body.classList.remove('disableScroll');
+   menuCont.classList.remove('menuContAnimation');
+   footerCont.style.bottom = "-80px";
 });
+
+
+
+
+
+
+
 //SIDE MENU ATSIRADIMO PABAIGA
+
+
+
+
+
 
 
 
@@ -110,7 +135,7 @@ var twoPartsButton = document.querySelector('#intoTwoParts');
 var onePartButton = document.querySelector('#intoOnePart');
 var fourPartButton = document.querySelector('#intoFourParts');
 var container = document.querySelector('.PicsContainer');
-var aukstis = "800px";
+var aukstis = "1000px";
 
 
 twoPartsButton.addEventListener('click', function() {
